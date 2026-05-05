@@ -1,0 +1,77 @@
+const files = [
+  {
+    _id: "1",
+    fileName: "CS101_Syllabus.pdf",
+    fileType: "pdf",
+    courseId: 1,
+    fileSize: 1024,
+    createdAt: new Date("2024-09-01"),
+  },
+  {
+    _id: "2",
+    fileName: "DB101_Project_Guidelines.pdf",
+    fileType: "pdf",
+    courseId: 2,
+    fileSize: 2048,
+    createdAt: new Date("2024-09-05"),
+  },
+  {
+    _id: "3",
+    fileName: "Ethical_Hacking_Resources.pdf",
+    fileType: "pdf",
+    courseId: 3,
+    fileSize: 512,
+    createdAt: new Date("2024-10-12"),
+  },
+  {
+    _id: "4",
+    fileName: "MongoDB_Setup_Guide.pdf",
+    fileType: "pdf",
+    fileSize: 4096,
+    createdAt: new Date("2024-10-18"),
+  },
+  {
+    _id: "5",
+    fileName: "React_Native_Resources.pdf",
+    fileType: "pdf",
+    fileSize: 1024,
+    createdAt: new Date("2024-10-16"),
+  },
+  {
+    _id: "6",
+    fileName: "Project_Proposal_Feedback.docx",
+    fileType: "word",
+    fileSize: 2048,
+    createdAt: new Date("2024-10-12"),
+  },
+  {
+    _id: "7",
+    fileName: "Lecture_Slides_Week1.pdf",
+    fileType: "pdf",
+    fileSize: 3072,
+    createdAt: new Date("2024-09-02"),
+  },
+  {
+    _id: "8",
+    fileName: "Assignment1_Template.docx",
+    fileType: "word",
+    fileSize: 1024,
+    createdAt: new Date("2024-09-15"),
+  },
+  {
+    _id: "9",
+    fileName: "Course_Banner.png",
+    fileType: "image",
+    fileSize: 5120,
+    createdAt: new Date("2024-09-01"),
+  },
+  {
+    _id: "10",
+    fileName: "ER_Diagram_Example.png",
+    fileType: "image",
+    fileSize: 1536,
+    createdAt: new Date("2024-09-20"),
+  },
+];
+
+module.exports = files;

@@ -331,7 +331,7 @@ const Profile = () => {
                     <div
                       key={course._id}
                       className="course-item clickable-course-item"
-                      onClick={() => navigate(`/courses/${course._id}`)}
+                      onClick={() => navigate(`/courses/${encodeURIComponent(course._id)}`)}
                     >
                       <div className="course-item-header">
                         <p className="course-item-title">{course.name}</p>
@@ -368,7 +368,7 @@ const Profile = () => {
                     <div
                       key={course._id}
                       className="course-item clickable-course-item"
-                      onClick={() => navigate(`/courses/${course._id}`)}
+                      onClick={() => navigate(`/courses/${encodeURIComponent(course._id)}`)}
                     >
                       <div className="course-item-header">
                         <p className="course-item-title">{course.name}</p>

@@ -192,7 +192,7 @@ const Courses = () => {
                       <button
                         key={course._id}
                         className="course-dropdown-item"
-                        onClick={() => navigate(`/courses/${course._id}`)}
+                        onClick={() => navigate(`/courses/${encodeURIComponent(course._id)}`)}
                       >
                         <span className="course-dropdown-code">
                           {course._id}
@@ -277,7 +277,7 @@ const Courses = () => {
                         activeTab === "my-courses" ||
                         isEnrolled(course._id)
                       ) {
-                        navigate(`/courses/${course._id}`);
+                        navigate(`/courses/${encodeURIComponent(course._id)}`);
                       }
                     }}
                   >

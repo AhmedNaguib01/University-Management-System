@@ -24,7 +24,8 @@ const getAvatarSrc = (item) => {
 };
 
 const CourseDetails = () => {
-  const { id } = useParams();
+  const { id: encodedId } = useParams();
+  const id = decodeURIComponent(encodedId);
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [course, setCourse] = useState(null);
@@ -114,7 +115,7 @@ const CourseDetails = () => {
   const loadFiles = async () => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/files/course/${id}`,
+        `${process.env.REACT_APP_API_URL}/files/course/${encodeURIComponent(id)}`,
         {
           headers: {
             Authorization: `Bearer ${getSession().token}`,
@@ -390,7 +391,7 @@ const CourseDetails = () => {
     try {
       setEnrolling(true);
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/courses/${id}`,
+        `${process.env.REACT_APP_API_URL}/courses/${encodeURIComponent(id)}`,
         {
           method: "DELETE",
           headers: {

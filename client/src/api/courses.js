@@ -6,7 +6,7 @@ export const getAllCourses = async () => {
 };
 
 export const getCourseById = async (courseId) => {
-  const response = await client.get(`/courses/${courseId}`);
+  const response = await client.get(`/courses/${encodeURIComponent(courseId)}`);
   return response.data;
 };
 
@@ -16,17 +16,17 @@ export const createCourse = async (courseData) => {
 };
 
 export const updateCourse = async (courseId, data) => {
-  const response = await client.put(`/courses/${courseId}`, data);
+  const response = await client.put(`/courses/${encodeURIComponent(courseId)}`, data);
   return response.data;
 };
 
 export const enrollStudent = async (courseId, userId) => {
-  const response = await client.post(`/courses/${courseId}/enroll`, {userId,});
+  const response = await client.post(`/courses/${encodeURIComponent(courseId)}/enroll`, {userId,});
   return response.data;
 };
 
 export const unenrollStudent = async (courseId, userId) => {
-  const response = await client.post(`/courses/${courseId}/unenroll`, {userId, });
+  const response = await client.post(`/courses/${encodeURIComponent(courseId)}/unenroll`, {userId, });
   return response.data;
 };
 

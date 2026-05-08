@@ -1,0 +1,132 @@
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.hover-shadow {
+  transition: box-shadow 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: var(--shadow-elegant);
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.space-y > * + * {
+  margin-top: 1rem;
+}
+
+/* Avatar Styles */
+.avatar {
+  position: relative;
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar-image {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.avatar-fallback {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.avatar-fallback-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.avatar-fallback-secondary {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.avatar-large {
+  height: 6rem;
+  width: 6rem;
+  font-size: 2rem;
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.badge-default {
+  background-color: var(--primary);
+  color: white;
+}
+
+.badge-secondary {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.badge-outline {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.badge-accent {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge-destructive {
+  background-color: var(--danger);
+  color: white;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}

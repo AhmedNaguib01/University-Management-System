@@ -1,0 +1,595 @@
+/* Post Card Base */
+.post-card {
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s, background-color 0.3s;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+}
+
+.post-card:hover {
+  box-shadow: var(--shadow-elegant);
+}
+
+/* Post Header */
+.post-header {
+  padding-bottom: 0.75rem;
+}
+
+.post-user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.post-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.post-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Post Content */
+.post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.post-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Larger title for detail pages */
+.post-title--large {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.post-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.post-text--preserve-whitespace {
+  white-space: pre-wrap;
+}
+
+/* Clickable Post */
+.clickable-post {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.clickable-post:hover {
+  transform: translateY(-2px);
+}
+
+.clickable-post:hover .post-title {
+  color: var(--primary);
+}
+
+/* Post Images */
+.post-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.post-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.post-image:hover {
+  transform: scale(1.02);
+}
+
+/* Post Actions */
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #6c757d;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.action-button:hover {
+  color: var(--primary);
+}
+
+.action-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* ============================================
+   USER COMPONENTS
+   ============================================ */
+
+/* User Details */
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.clickable-username {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.clickable-username:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.user-meta {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Avatar */
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ============================================
+   REACTION COMPONENTS
+   ============================================ */
+
+.post-reactions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+}
+
+/* Add border-bottom only when needed */
+.post-reactions--with-bottom-border {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reaction-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  color: #6c757d;
+  border: 2px solid transparent;
+  background-color: transparent;
+}
+
+.reaction-button:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: var(--primary);
+  border-color: rgba(13, 110, 253, 0.2);
+}
+
+.reaction-button.reaction-active {
+  background-color: #d0e7ff !important;
+  color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  font-weight: 600 !important;
+}
+
+.reaction-button.reaction-active:hover {
+  background-color: #b8dcff !important;
+}
+
+/* ============================================
+   COMMENT COMPONENTS
+   ============================================ */
+
+.comments-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+/* Remove top border and padding when it's the main content */
+.comments-section--no-border {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.comments-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.no-comments {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 1rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.comment {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.comment-avatar {
+  flex-shrink: 0;
+}
+
+.comment-content {
+  flex: 1;
+  background-color: var(--bg-tertiary);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.comment-author {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.comment-author:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.comment-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.comment-text {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Add Comment Form */
+.add-comment {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.comment-input-container {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+}
+
+.comment-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+/* ============================================
+   MENU COMPONENTS
+   ============================================ */
+
+.post-menu {
+  position: relative;
+}
+
+.menu-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  transition: all 0.2s;
+}
+
+.menu-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--dark);
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  min-width: 150px;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: background-color 0.2s;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu-item.delete-item {
+  color: #dc3545;
+}
+
+.menu-item.delete-item:hover {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* ============================================
+   FORM COMPONENTS
+   ============================================ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-select {
+  cursor: pointer;
+  background-color: var(--input-bg);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   BUTTON COMPONENTS
+   ============================================ */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  border-radius: var(--radius);
+  width: fit-content;
+}
+
+.back-button:hover {
+  color: var(--primary);
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* ============================================
+   LOADING & EMPTY STATES
+   ============================================ */
+
+.loading,
+.loading-posts,
+.loading-post,
+.error,
+.error-post,
+.empty-posts {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.error,
+.error-post {
+  color: var(--danger);
+}
+
+/* ============================================
+   SIDEBAR COMPONENTS
+   ============================================ */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-card {
+  box-shadow: var(--shadow-card);
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Event Item */
+.event-item {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.event-item:hover {
+  border-color: var(--primary);
+  background-color: rgba(13, 110, 253, 0.02);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-title {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.event-meta {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.event-type-badge {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+.empty-events {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+
+@media (max-width: 768px) {
+  .post-title--large {
+    font-size: 1.25rem;
+  }
+
+  .post-images {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1;
+  }
+}
